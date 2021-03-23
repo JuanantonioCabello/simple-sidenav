@@ -43,10 +43,11 @@ export class SimpleSidenavComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     this.activeOne = {};
 
-    if (changes.activeID && changes.activeID.currentValue) {
+    /*if (changes.activeID && changes.activeID.currentValue) {
       this.activeID = changes.activeID.currentValue;
       this.activeID && this.menu && this.findActive();
-    }
+    }*/
+    this.findActive();
   }
 
   onNavClick({ id, name, icon }: SimpleMenu, index: number): void {
